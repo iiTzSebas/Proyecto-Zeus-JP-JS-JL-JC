@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block Titulo %} Contacto {% endblock %} 
+{% block Titulo %} Contacto SC {% endblock %} 
 
   {% block contenido %}
   <h1>Bienvenidos a la sección de contacto, Pantalla de Juan Pablo</h1>
@@ -49,6 +49,42 @@
 </div>
 
 <!--bootstrapt final-->
+
+  <br>
+  <br>
+
+<!--botones inicio-->
+<div class="d-flex justify-content-center">
+  <div class="btn-group" role="group" aria-label="Basic outlined example ">
+    <button type="button" class="btn btn-outline-primary">Dirigir contacto Cede A</button>
+    <button type="button" class="btn btn-outline-primary">Dirigir contacto Cede B</button>
+    <button type="button" class="btn btn-outline-primary">Dirigir contacto Cede C</button>
+  </div>
+</div>
+<!--botones final-->
+
+  <br>
+  <br>
+
+
+
+<p> Para otras dudas o sugerencias que necesite, deje un comentario aqui abajo:</p>
+
+<!--sección de comentarios inicio-->
+<form method="post" class="mt-4">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Su Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" required>
+    </div>
+    <div class="mb-3">
+        <label for="comentario" class="form-label">Su Comentario</label>
+        <textarea class="form-control" id="comentario" name="comentario" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+<!--sección de comentarios final-->
+
 
   {% endblock %}
   
