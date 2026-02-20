@@ -1,46 +1,69 @@
 {% extends "base.html" %}
 
-{% block Titulo %} Pagina de camilo(nosotros) {% endblock %} 
+{% block Titulo %} Nosotros - Proyecto Zeus {% endblock %} 
 
   {% block contenido %}
-  <h1>Estamos en la pantalla de camilo</h1>
-  <p>camilo esta cambiando la carpeta de nosotros</p>
-  <br>
-  <!--boostrap tabla ejemplo-->
-  <div class="table-responsive">
-    <table class="table table-striped table-hover table-bordered">
-      <thead class="table-dark">
-        <tr>
-          <th scope="col">#</th>
-          <th scope="col">Nombre</th>
-          <th scope="col">Apellido</th>
-          <th scope="col">Usuario</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <th scope="row">2</th>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <th scope="row">3</th>
-          <td>John</td>
-          <td>Doe</td>
-          <td>@social</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="container mt-4">
+    <!-- Encabezado -->
+    <div class="text-center mb-5">
+      <h1 class="display-4">Sobre Nosotros</h1>
+      <p class="lead">Conoce al equipo y la visión detrás de Proyecto Zeus.</p>
+    </div>
+
+    <!-- Misión y Visión (Tarjetas) -->
+    <div class="row mb-5">
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h3 class="card-title text-primary">Nuestra Misión</h3>
+            <p class="card-text">Desarrollar soluciones tecnológicas innovadoras que faciliten la vida de nuestros usuarios, manteniendo altos estándares de calidad.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h3 class="card-title text-success">Nuestra Visión</h3>
+            <p class="card-text">Ser referentes en el desarrollo de software, reconocidos por nuestra eficiencia y compromiso con la excelencia en cada proyecto.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Equipo de Trabajo (Tabla) -->
+    <h2 class="mb-3">Nuestro Equipo</h2>
+    <div class="table-responsive">
+      <table class="table table-striped table-hover table-bordered">
+        <thead class="table-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Rol</th>
+            <th scope="col">Contacto</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Juan Pérez</td>
+            <td>Desarrollador Backend</td>
+            <td>juan@zeus.com</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Maria López</td>
+            <td>Diseñadora UI/UX</td>
+            <td>maria@zeus.com</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Carlos Ruiz</td>
+            <td>Gestor de Proyecto</td>
+            <td>carlos@zeus.com</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
-  <!--fin boostrap tabla ejemplo-->
-  <br>
-  <p> camilo controla la pagina </p>
   {% endblock %}
-  {% block pie %} Usted esta parado aqui en Nosotros {% endblock %}
+  {% block pie %} Proyecto Zeus &copy; 2024 - Todos los derechos reservados {% endblock %}
