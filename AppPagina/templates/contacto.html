@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block Titulo %} Contacto {% endblock %} 
+
+  {% block contenido %}
+  <h1>Bienvenidos a la sección de contacto, Pantalla de Juan Pablo</h1>
+
+  <br>
+  <!--bootstrapt inicio-->
+  <p style="color: black; background-color: yellow;"> En esta sección puedes comunicarte con:</p>
+
+    <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" style="background-color: red; color: white;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Recursos humanos
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Departamento de Gestión Humana.</strong> Comuníquese con nosotros para procesos de selección, afiliaciones, certificaciones laborales y bienestar del empleado. Estamos ubicados en la oficina 201 para atender sus solicitudes administrativas.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" style="background-color: orange;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Servicio al cliente 24/7
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Atención continua.</strong> Nuestro equipo de soporte está disponible las 24 horas del día, los 7 días de la semana, para resolver sus dudas, recibir PQR (Peticiones, Quejas y Reclamos) y brindar asistencia técnica en cualquier momento.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" style="background-color: yellow;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Chat virtual en vivo.
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Asistencia en línea.</strong> Hable en tiempo real con uno de nuestros asesores a través de nuestro chat interactivo. Es la forma más rápida de obtener respuestas a preguntas frecuentes y soporte inmediato sin necesidad de llamadas telefónicas.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--bootstrapt final-->
+
+  {% endblock %}
+  
+  {% block pie %} Si tiene alguna duda comuniquese al +57 321587504 
+
+  o dirijase a nuestros puntos fisicos.
+  {% endblock %}

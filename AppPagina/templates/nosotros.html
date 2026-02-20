@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block Titulo %} Pagina de camilo(nosotros) {% endblock %} 
+
+  {% block contenido %}
+  <h1>Estamos en la pantalla de camilo</h1>
+  <p>camilo esta cambiando la carpeta de nosotros</p>
+  <br>
+  <!--boostrap tabla ejemplo-->
+  <div class="table-responsive">
+    <table class="table table-striped table-hover table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Apellido</th>
+          <th scope="col">Usuario</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>John</td>
+          <td>Doe</td>
+          <td>@social</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--fin boostrap tabla ejemplo-->
+  <br>
+  <p> camilo controla la pagina </p>
+  {% endblock %}
+  {% block pie %} Usted esta parado aqui en Nosotros {% endblock %}
