@@ -10,3 +10,12 @@
     background-color: black;
     text-align: center;
 }
+
+/* Animación de presionar para botones */
+.btn-press {
+    transition: transform 0.1s ease-out;
+}
+
+.btn-press:active {
+    transform: scale(0.95); /* Encoge el botón al hacer clic */
+}
