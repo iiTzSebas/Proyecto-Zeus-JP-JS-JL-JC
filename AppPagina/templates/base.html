@@ -19,10 +19,12 @@
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="{% url 'inicio' %}">Inicio</a>
-                    <a class="nav-link" href="{% url 'servicios' %}">Servicios</a>
-                    <a class="nav-link" href="{% url 'nosotros' %}">Nosotros</a>
-                    <a class="nav-link" href="{% url 'contacto' %}">Contactenos</a>
+                    {% with url_name=request.resolver_match.url_name %}
+                        <a class="nav-link {% if url_name == 'inicio' %}active{% endif %}" {% if url_name == 'inicio' %}aria-current="page"{% endif %} href="{% url 'inicio' %}">Inicio</a>
+                        <a class="nav-link {% if url_name == 'servicios' %}active{% endif %}" {% if url_name == 'servicios' %}aria-current="page"{% endif %} href="{% url 'servicios' %}">Servicios</a>
+                        <a class="nav-link {% if url_name == 'nosotros' %}active{% endif %}" {% if url_name == 'nosotros' %}aria-current="page"{% endif %} href="{% url 'nosotros' %}">Nosotros</a>
+                        <a class="nav-link {% if url_name == 'contacto' %}active{% endif %}" {% if url_name == 'contacto' %}aria-current="page"{% endif %} href="{% url 'contacto' %}">Contactenos</a>
+                    {% endwith %}
                 </div>
             </div>
         </div>
