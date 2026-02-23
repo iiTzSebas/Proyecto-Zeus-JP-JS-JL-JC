@@ -1,6 +1,8 @@
 {% extends "base.html" %}
 
-{% block Titulo %} Contacto SC {% endblock %} 
+{% load static %}
+
+{% block Titulo %} Contacto zeus {% endblock %} 
 
   {% block contenido %}
   <h1>Bienvenidos a la sección de contacto, Pantalla de Juan Pablo</h1>
@@ -84,6 +86,11 @@
     <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
 <!--sección de comentarios final-->
+
+
+<!--Insertar imagenes con Django-->
+<img src= "{% static 'AppPagina/img/piton.png' %}" alt="Logo Python">
+<!--Insertar imagenes con Django-->
 
 
   {% endblock %}
