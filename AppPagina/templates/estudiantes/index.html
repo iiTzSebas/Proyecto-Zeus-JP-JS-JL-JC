@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block Titulo %} Asistencia zeus{% endblock %} 
+
+  {% block contenido %}
+  <h1>Bienvenidos a la sección de Asistencia</h1>
+  <p> En esta sección puedes comunicarte con el equipo de soporte para resolver tus dudas, recibir asistencia técnica o enviar tus comentarios. Estamos aquí para ayudarte en lo que necesites.</p>
+
+  <!--bs5-card-head-->
+  <div class="card">
+    <div class="card-header">Listado de estudiantes</div>
+    <div class="card-body">
+        <h4 class="card-title">Estudiantes</h4>
+        <p class="card-text">Text</p>
+        <!--bs5-table-default -->
+        <div
+            class="table-responsive"
+        >
+            <table
+                class="table table-primary"
+            >
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Foto</th>
+                        <th scope="col">Clase</th>
+                        <th scope="col">Acciones</th>
+
+
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="">
+                        <td scope="row">1</td>
+                        <td>Carlos</td>
+                        <td>Ramirez</td>
+                        <td>misfotos/foto_1.jpeg</td>
+                        <td>Bases de datos</td>
+                        <td>Editar - Eliminar</td>
+                    </tr>
+                    <tr class="">
+                        <td scope="row">2</td>
+                        <td>Maria</td>
+                        <td>Gomez</td>
+                        <td>misfotos/foto_2.jpeg</td>
+                        <td>Ingles</td>
+                        <td>Editar - Eliminar</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+
+
+    </div>
+    <div class="card-footer text-muted">Footer</div>
+  </div>
+  <!--bs5-card-final-->
+  
+  <!--css-->
+  <link rel="stylesheet" href="{% static 'AppPagina/css/estilos.css' %}">
+
+  <br>
+  <!--bootstrapt inicio-->
+  <p style="color: black; background-color: yellow;"> En esta sección puedes comunicarte con:</p>
+
+    <div class="accordion" id="accordionExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button" style="background-color: red; color: white;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+        Recursos humanos
+      </button>
+    </h2>
+    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Departamento de Gestión Humana.</strong> Comuníquese con nosotros para procesos de selección, afiliaciones, certificaciones laborales y bienestar del empleado. Estamos ubicados en la oficina 201 para atender sus solicitudes administrativas.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" style="background-color: orange;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+        Servicio al cliente 24/7
+      </button>
+    </h2>
+    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Atención continua.</strong> Nuestro equipo de soporte está disponible las 24 horas del día, los 7 días de la semana, para resolver sus dudas, recibir PQR (Peticiones, Quejas y Reclamos) y brindar asistencia técnica en cualquier momento.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" style="background-color: yellow;" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+        Chat virtual en vivo.
+      </button>
+    </h2>
+    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+      <div class="accordion-body">
+        <strong>Asistencia en línea.</strong> Hable en tiempo real con uno de nuestros asesores a través de nuestro chat interactivo. Es la forma más rápida de obtener respuestas a preguntas frecuentes y soporte inmediato sin necesidad de llamadas telefónicas.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--bootstrapt final-->
+
+  <br>
+  <br>
+
+<!--botones inicio-->
+<div class="d-flex justify-content-center">
+  <div class="btn-group" role="group" aria-label="Basic outlined example ">
+    <button type="button" class="btn btn-outline-primary">Dirigir contacto Cede A</button>
+    <button type="button" class="btn btn-outline-primary">Dirigir contacto Cede B</button>
+    <button type="button" class="btn btn-outline-primary">Dirigir contacto Cede C</button>
+  </div>
+</div>
+<!--botones final-->
+
+  <br>
+  <br>
+
+
+
+<p> Para otras dudas o sugerencias que necesite, deje un comentario aqui abajo:</p>
+
+<!--sección de comentarios inicio-->
+<form method="post" class="mt-4">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="nombre" class="form-label">Su Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" required>
+    </div>
+    <div class="mb-3">
+        <label for="comentario" class="form-label">Su Comentario</label>
+        <textarea class="form-control" id="comentario" name="comentario" rows="4" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+<!--sección de comentarios final-->
+<br>
+<br>
+<!--Insertar imagenes con Django-->
+<img src= "{% static 'AppPagina/img/piton.png' %}" alt="Logo Python" style= "max-width: 100%; height: 200px;"> 
+
+<div class="text-end">
+  <img src="{% static 'AppPagina/img/PELISS.png' %}" alt="El pelicano" class="img-fluid" style="max-width: 100%; height: 200px;">
+</div>
+<!--Insertar imagenes con Django-->
+<hr>
+<br>
+<br>
+
+<h4 class="otroxd"> Esto es para probar la carpeta CSS estilos.css</h4>
+  <h4 class="otroxd">Karasu estuvo aqui caw</h4>
+
+<!--<a href="#" class="btn btn-primary shadow">Volver a la parte superior de la pagina</a>-->
+
+<a href="#" class="texto-rojo">Volver a la parte superior de la pagina</a>
+  {% endblock %}
+  
+  {% block pie %} Usted esta aqui en asistencia clases
+
+
+  {% endblock %}
