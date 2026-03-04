@@ -10,7 +10,17 @@
 
   <!--bs5-card-head-->
   <div class="card">
-    <div class="card-header">Listado de estudiantes</div>
+    <div class="card-header">
+      <!--bs5-button-a-->
+   <a
+    name=""
+    id=""
+    class="btn btn-success"
+    href="{% url 'crear' %}"
+    role="button"
+    >Agregar Estudiante</a>
+    <!--bs5-button-a-->
+
     <div class="card-body">
         <h4 class="card-title">Estudiantes</h4>
         <p class="card-text">Text</p>
@@ -41,7 +51,25 @@
                         <td>Ramirez</td>
                         <td>misfotos/foto_1.jpeg</td>
                         <td>Bases de datos</td>
-                        <td>Editar - Eliminar</td>
+                        <td>
+                          <a
+                            name=""
+                            id=""
+                            class="btn btn-warning"
+                            href="{% url 'editar' %}"
+                            role="button"
+                            >Editar</a
+                          >
+                          
+                          <a
+                            name=""
+                            id=""
+                            class="btn btn-danger"
+                            href="{#}"
+                            role="button"
+                            >Eliminar</a
+                          >
+                      </td>
                     </tr>
                     <tr class="">
                         <td scope="row">2</td>
@@ -49,7 +77,13 @@
                         <td>Gomez</td>
                         <td>misfotos/foto_2.jpeg</td>
                         <td>Ingles</td>
-                        <td>Editar - Eliminar</td>
+                        <td>
+
+                          <a href="{% url 'editar' %}">Editar</a>
+                      
+                          - 
+                          
+                          Eliminar</td>
                     </tr>
                 </tbody>
             </table>

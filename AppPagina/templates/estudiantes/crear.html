@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block Titulo %} Crear{% endblock %} 
+
+{% block contenido %}
+
+ <h1>Crear Estudiante</h1>
+ <!--bs5-card-head-foot -->
+ <div class="card">
+    <div class="card-header">Crear Estudiante</div>
+    <div class="card-body">
+        <h4 class="card-title">Datos del Estudiante</h4>
+        <p class="card-text">Estos son los datos del estudiante.</p>
+         <!--! incluir el formulario.html -!-->
+        {% include "estudiantes/formulario.html" %}
+
+
+    </div>
+    <div class="card-footer text-muted">Footer</div>
+ </div>
+ 
+
+  {% endblock %}
+  
+  {% block pie %} Usted esta en la pantalla de crear
+
+
+  {% endblock %}

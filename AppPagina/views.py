@@ -23,3 +23,10 @@ def contacto(request):
 
 def estudiantes(request):
     return render(request, "estudiantes/index.html") 
+
+def crear(request):
+    return render(request, "estudiantes/crear.html") 
+
+def editar(request):
+    return render(request, "estudiantes/editar.html") 
+    
