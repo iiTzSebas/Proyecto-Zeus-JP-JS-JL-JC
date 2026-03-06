@@ -32,6 +32,7 @@
                 class="table table-primary"
             >
                 <thead>
+
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Nombre</th>
@@ -40,17 +41,17 @@
                         <th scope="col">Clase</th>
                         <th scope="col">Acciones</th>
 
-
+                {% for estudiante in estudiantes %}
 
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="">
-                        <td scope="row">1</td>
-                        <td>Carlos</td>
-                        <td>Ramirez</td>
-                        <td>misfotos/foto_1.jpeg</td>
-                        <td>Bases de datos</td>
+                        <td scope="row">{{estudiante.id}}</td>
+                        <td>{{estudiante.nombre}}</td>
+                        <td>{{estudiante.apellido}}</td>
+                        <td> <img src="{{estudiante.foto.url}}" width="45" alt="foto"></td>
+                        <td>{{estudiante.clase}}</td>
                         <td>
                           <a
                             name=""
@@ -71,20 +72,8 @@
                           >
                       </td>
                     </tr>
-                    <tr class="">
-                        <td scope="row">2</td>
-                        <td>Maria</td>
-                        <td>Gomez</td>
-                        <td>misfotos/foto_2.jpeg</td>
-                        <td>Ingles</td>
-                        <td>
 
-                          <a href="{% url 'editar' %}">Editar</a>
-                      
-                          - 
-                          
-                          Eliminar</td>
-                    </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>

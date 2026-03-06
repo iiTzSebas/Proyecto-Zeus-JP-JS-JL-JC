@@ -11,3 +11,8 @@ class estudiante(models.Model):
 
     def __str__(self):
         return self.nombre + " " + self.apellido
+    
+    def delete(self, ususing=None, keep_parents=False):
+        if self.foto:
+            self.foto.delete(self)
+        super().delete() 
