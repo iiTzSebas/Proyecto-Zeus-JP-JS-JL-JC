@@ -1,0 +1,7 @@
+body {
+    /* Ajusta 'nombre_imagen.png' al nombre real de tu archivo en la carpeta img */
+    background-image: url('../img/Fondo.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
