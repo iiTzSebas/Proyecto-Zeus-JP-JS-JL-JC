@@ -1,13 +1,41 @@
+{% csrf_token %}
+
+{% for campo in formulario %}
 <!-- bs5-form-group -->
 
+    <!--<div class="mb-3">
+<label for=""class="form-label">{{ campo.label }}</label>
+{{campo}}
+    </div>-->
+
 <div class="mb-3">
-    <label for="" class="form-label">Nombre:</label>
+    <label for="" class="form-label">{{ campo.label }}</label>
     <input
-        type="text"
-        name=""
+        type="{{ campo.field.widget.input_type }}"
+        name="{{ campo.name }}"
         id=""
         class="form-control"
-        placeholder=""
+        placeholder="{{ campo.label }}"
         aria-describedby="helpId"
     />
 </div>
+{% endfor %}
+
+<!--bs5-button-a-->
+<a
+    name=""
+    id=""
+    class="btn btn-success"
+    href="#"
+    role="button"
+    >Enviar Información</a
+>
+
+<a
+    name=""
+    id=""
+    class="btn btn-dark"
+    href="#"
+    role="button"
+    >Cancelar</a
+>

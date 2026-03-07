@@ -4,6 +4,9 @@ from django.shortcuts import render
 
 from.models import estudiante
 
+from.forms import estudianteForm
+
+
 # Create your views here.
 def saludo(request):
     return HttpResponse("Buenas tardes a TODOS---")
@@ -32,7 +35,10 @@ def estudiantes(request):
     return render(request, "estudiantes/index.html", data) 
 
 def crear(request):
-    return render(request, "estudiantes/crear.html") 
+    formulario = estudianteForm(request.POST or None, request.FILES or None)
+    if formulario.is_valid():
+        formulario.save()
+    return render(request, "estudiantes/crear.html", {'formulario':formulario }) 
 
 def editar(request):
     return render(request, "estudiantes/editar.html") 
