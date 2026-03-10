@@ -1,0 +1,172 @@
+.crear-layout {
+    max-width: 1050px;
+    margin: 22px auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+    gap: 18px;
+    align-items: start;
+}
+
+.crear-card {
+    background: #ffffff;
+    border: 1px solid #d3e4ff;
+    border-radius: 16px;
+    box-shadow: 0 14px 24px rgba(7, 45, 91, 0.08);
+    overflow: hidden;
+}
+
+.crear-card-header {
+    padding: 18px 22px;
+    border-bottom: 1px solid #e7f0ff;
+    background: linear-gradient(120deg, #f4f9ff 0%, #ebf3ff 100%);
+}
+
+.titulo-crear {
+    margin: 0;
+    color: #113457;
+    font-size: 1.7rem;
+    font-weight: 800;
+}
+
+.subtitulo-crear {
+    margin: 8px 0 0;
+    color: #425e79;
+}
+
+.crear-card-body {
+    padding: 18px;
+}
+
+.crear-aside {
+    border: 1px solid #d3e4ff;
+    border-radius: 16px;
+    padding: 16px;
+    background: linear-gradient(180deg, #f9fcff 0%, #eef5ff 100%);
+    box-shadow: 0 10px 18px rgba(7, 45, 91, 0.06);
+    text-align: center;
+}
+
+.crear-imagen {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border-radius: 12px;
+    margin: 6px auto 10px;
+    display: block;
+}
+
+.crear-aside h3 {
+    color: #0f3660;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+.crear-aside p {
+    color: #486580;
+    margin-bottom: 4px;
+}
+
+/* Contenedor principal del formulario */
+.formulario-estudiante {
+    background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+    border: 1px solid #d8e7ff;
+    border-radius: 14px;
+    padding: 22px;
+    box-shadow: 0 10px 24px rgba(0, 61, 122, 0.08);
+}
+
+/* Distribucion adaptable de campos */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 16px;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-item .form-label {
+    font-weight: 700;
+    color: #17324d;
+    margin-bottom: 6px;
+}
+
+/* Estilo para widgets de Django */
+.form-item input,
+.form-item textarea,
+.form-item select {
+    width: 100%;
+    border: 1px solid #b8d1f5;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #1b3550;
+    padding: 10px 12px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-item input:focus,
+.form-item textarea:focus,
+.form-item select:focus {
+    border-color: #1d6fd8;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(29, 111, 216, 0.18);
+}
+
+.form-item textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+/* Campo de archivo */
+.form-item input[type="file"] {
+    padding: 8px;
+    background: #f0f6ff;
+}
+
+.help-text {
+    color: #4c6074;
+    margin-top: 6px;
+}
+
+.error-text {
+    color: #b3261e;
+    margin-top: 6px;
+    font-weight: 600;
+}
+
+.campo-error input,
+.campo-error textarea,
+.campo-error select {
+    border-color: #d14a41;
+    background-color: #fff8f8;
+}
+
+.acciones-formulario {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.acciones-formulario .btn {
+    border-radius: 10px;
+    padding: 9px 16px;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .crear-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .formulario-estudiante {
+        padding: 16px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}

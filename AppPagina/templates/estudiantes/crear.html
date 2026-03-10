@@ -4,24 +4,35 @@
 
 {% block Titulo %} Crear{% endblock %} 
 
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'AppPagina/css/stillo.css' %}">
+{% endblock %}
+
 {% block contenido %}
 
 <h1>Crear Estudiante</h1>
 <!--bs5-card-head-foot -->
-<div class="card">
-    <div class="card-header">Crear Estudiante</div>
-    <div class="card-body">
-        <h4 class="card-title">Datos del Estudiante</h4>
-        <p class="card-text">Estos son los datos del estudiante.</p>
-        <!--! incluir el formulario.html -!-->
-        {% include "estudiantes/formulario.html" %}
+    <section class= "crear-layout">
+        <div class="crear-card">
+            <div class="crear-card-header">
+                <h1 class="titulo-crear">Crear Estudiante</h1>
+                <p class="subtitulo-crear">Estos son los datos del estudiante.</p>
+            </div>
+
+            <div class="crear-card-body">
+                <!--! incluir el formulario.html -!-->
+                {% include "estudiantes/formulario.html" %}
+            </div>
+        </div>
 
 
-    </div>
-    <div class="card-footer text-muted">Footer</div>
-</div>
+        <aside class="crear-aside" aria-label="Imagen representativa de crear estudiante">
+            <img src="{% static 'AppPagina/img/crear-estudiante.svg' %}" alt="Ilustracion de registro de estudiante" class="crear-imagen">
+            <h3>Registro rapido</h3>
+            <p>Guarda datos, foto y clase desde un solo formulario.</p>
+        </aside>
 
-
+    </section>
 {% endblock %}
 
 {% block pie %} 
