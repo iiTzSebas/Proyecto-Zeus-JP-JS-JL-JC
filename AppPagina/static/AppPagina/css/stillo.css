@@ -1,3 +1,7 @@
+body{
+    background-color: crimson;
+}
+
 .crear-layout {
     max-width: 1050px;
     margin: 22px auto;

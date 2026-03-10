@@ -25,7 +25,6 @@
 
     <div class="card-body">
         <h4 class="card-title">Estudiantes</h4>
-        <p class="card-text">Text</p>
         <!--bs5-table-default -->
         <div
             class="table-responsive"
@@ -59,7 +58,7 @@
                             name=""
                             id=""
                             class="btn btn-warning"
-                            href="{% url 'editar' %}"
+                            href="{% url 'editar' estudiante.id %}"
                             role="button"
                             >Editar</a
                           >
@@ -68,7 +67,7 @@
                             name=""
                             id=""
                             class="btn btn-danger"
-                            href="{#}"
+                            href="{% url 'eliminar' estudiante.id %}"
                             role="button"
                             >Eliminar</a
                           >

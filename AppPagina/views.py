@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from.models import estudiante
 
@@ -40,6 +40,14 @@ def crear(request):
         formulario.save()
     return render(request, "estudiantes/crear.html", {'formulario':formulario }) 
 
-def editar(request):
-    return render(request, "estudiantes/editar.html") 
-    
+def editar(request, id):
+    estudianteE = estudiante.objects.get(id=id)
+    formulario = estudianteForm(request.POST or None, request.FILES or None, instance=estudianteE)
+    if formulario.is_valid() and request.POST:
+        formulario.save()
+    return render(request, 'estudiantes/editar.html', {'formulario':formulario })
+
+def eliminar(request, id):
+    estudianteD = estudiante.objects.get(id=id)
+    estudianteD.delete()
+    return redirect('estudiantes') 
